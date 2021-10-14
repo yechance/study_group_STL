@@ -1,3 +1,4 @@
+//1920 Build Array from Permutation
 class Solution {
 public:
     vector<int> buildArray(vector<int>& nums) {
@@ -10,7 +11,7 @@ public:
     }
 };
 
-
+//1929 Concatenation of Array
 class Solution {
 public:
     vector<int> getConcatenation(vector<int>& nums) {
@@ -19,6 +20,21 @@ public:
         {
             output.push_back(nums[i%nums.size()]);
         }
+        return output;
+    }
+};
+
+//2011Final Value of Variable After Performing Operations
+class Solution {
+public:
+    int finalValueAfterOperations(vector<string>& operations) {
+        int output=0;
+            for(int i=0;i<operations.size();i++){
+                if(operations[i]=="X++"||operations[i]=="++X")
+                    output++;
+                else
+                    output--;
+            }
         return output;
     }
 };
